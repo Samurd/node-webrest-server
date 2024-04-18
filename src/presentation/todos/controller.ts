@@ -76,6 +76,7 @@ export class TodosController {
     const todo = todos.find((t) => t.id === id);
     if (!todo) return res.status(404).json({ error: "Todo not found" });
 
+    
     todos.splice(todos.indexOf(todo), 1);
     res.json({ todo });
   }
